@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0a192f;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 1200px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 34px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 16px;
+    color: #a8b2d1;
+    margin: 5px 0 0 0;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #1e2a3a;
+    border-radius: 20px;
+    height: 15px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.progress-bar {
+    width: 10%; /* Adjust as needed */
+    height: 100%;
+    background-color: #f5a623;
+    border-radius: 20px;
+}
+
+.progress-bar-dot {
+    position: absolute;
+    top: -7px;
+    left: 10%; /* Should match the progress bar width */
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #4a90e2;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+}
+
+.sprint-labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-top: 10px;
+    color: #a8b2d1;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    width: 23%;
+    text-align: center;
+    background-color: #1d2c4d;
+}
+
+.card.pattern-bg {
+    background-color: #112240;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dHTZ2dmdnZ2UlJSUlJSSkpJ9fX11dXVsbGxoaGhnZ2ZpaWlgYGBiYmJqampwcHB3d3d4eHh9fX1tbW1+fn5/f39sbGxsbGz+6g0GAAAAHHRSTlMAAAAQ8DDwUBAQ8DDwUPBw8PDw8PDw8PDw8PAg8PAn/3S3AAAAQUlEQVR42u3Vyw7AIAhE0bda29t7/1v2YtBwA/v2/3v0bAIAAAAAAAAAAAAAAAAAAADgZ1u2/v/A9T9g8f+L/zP4/8P/H/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/z/8f+P/...
