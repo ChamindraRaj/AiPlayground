@@ -20,7 +20,7 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            background: rgb(224, 224, 224);
+            background: white;
             padding: 30px;
             border-radius: 10px;
         }
@@ -33,25 +33,23 @@
         }
         
         .title {
-            font-size: 55px;
+            font-size: 36px;
             font-weight: 700;
             color: #003d5c;
         }
         
         .title .increment {
-            font-weight: 700;
             color: #ff6633;
         }
         
         .subtitle {
-            font-size: 30px;
-            font-weight: 700;
+            font-size: 18px;
             color: #ff6633;
             margin-bottom: 5px;
         }
-        
+
         .subtitle .sprintrange {
-            font-weight: 700;
+            font-weight: 700;;
             color: #003d5c;
         }
         
@@ -70,16 +68,15 @@
         
         .progress-container {
             display: flex;
-            background: #ffffff;
+            background: #e8e8e8;
             border-radius: 25px;
             padding: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
             position: relative;
         }
         
         .progress-item {
             flex: 1;
-            font-size: 20px;
             text-align: center;
             padding: 8px;
             color: #999;
@@ -91,8 +88,7 @@
         .progress-item.active {
             background: #ff6633;
             color: white;
-            font-size: 20px;
-            border-radius: 20px;
+            border-radius: 80px;
             position: relative;
         }
         
@@ -123,45 +119,35 @@
         }
         
         .card-header {
-            font-size: 40px;
             padding: 20px;
             color: white;
-            min-height: 320px;
+            min-height: 180px;
         }
         
         .card-header-primary {
             background: #003d5c;
-            min-height: 320px;
-            padding: 20px;
         }
         
         .card-header-secondary {
-            padding: 20px;
             background: linear-gradient(135deg, #4a6c7d 0%, #003d5c 100%);
         }
         
         .card-header h2 {
-            font-size: 36px;
+            font-size: 24px;
             font-weight: 700;
-            text-align: center;
             margin-bottom: 15px;
             line-height: 1.2;
         }
         
         .item {
-            font-size: 14px;
+            font-size: 13px;
             margin-bottom: 5px;
         }
         
-        .maincard-body {
-            padding: 30px 20px;
-            text-align: center;
-            background: white;
-        }
         .card-body {
             padding: 30px 20px;
             text-align: center;
-            background: linear-gradient(135deg, #4a6c7d 0%, #003d5c 100%);
+            background: white;
         }
         
         .metric-large {
@@ -171,33 +157,20 @@
             line-height: 1;
             display: inline;
         }
-        .metric-largewhite {
-            font-size: 120px;
-            font-weight: 700;
-            color: white;
-            line-height: 1;
-            display: inline;
-        }
         
         .metric-divider {
-            height: 10px;
+            height: 4px;
             background: #ff6633;
             margin: 10px 40px;
         }
         
         .metric-label {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 700;
             color: #003d5c;
             margin-top: 15px;
         }
         
-        .metric-labelwhite {
-            font-size: 20px;
-            font-weight: 700;
-            color: white;
-            margin-top: 15px;
-        }
         .card-footer {
             background: #ff6633;
             padding: 20px;
@@ -206,24 +179,24 @@
         }
         
         .health-score {
-            font-size: 100px;
+            font-size: 48px;
             font-weight: 700;
             display: inline;
         }
         
         .health-divider {
-            height: 8px;
+            height: 3px;
             background: #003d5c;
-            margin: 8px 20px;
+            margin: 8px 40px;
         }
         
         .health-max {
-            font-size: 60px;
+            font-size: 36px;
             font-weight: 700;
         }
         
         .health-label {
-            font-size: 20px;
+            font-size: 14px;
             font-weight: 700;
             margin-top: 8px;
             letter-spacing: 1px;
@@ -233,9 +206,9 @@
 <body>
     <div class="container">
         <div class="header">
-            <div>
+            <div>                
                 <div class="title">DIGITAL TECHNOLOGY – <span class="increment">INCREMENT 17</span></div>
-                <div class="subtitle">Delivery metrics for <span class="sprintrange">Sprint 17.1 - 17.1</span></div>
+                <div class="subtitle">Delivery metrics for Sprint 17.1 - 17.1</div>
             </div>
             <div class="logo">
                 SIME
@@ -250,16 +223,16 @@
         <div class="card">
             <div class="card-header card-header-primary">
                 <h2>DIGITAL TECHNOLOGY</h2>
-                <div class="item">✓ DIGITAL</div><div class="item">✓ ENTERPRISE APPLICATIONS</div><div class="item">✓ TECHNOLOGY OPERATIONS</div>
+                <div class="item">✓ ENTERPRISE APPLICATIONS</div><div class="item">✓ TECHNOLOGY OPERATIONS</div>
             </div>
-            <div class="maincard-body">
-                <div class="metric-large">5</div>
+            <div class="card-body">
+                <div class="metric-large">0</div>
                 <div class="metric-divider"></div>
-                <div class="metric-large">153</div>
+                <div class="metric-large">0</div>
                 <div class="metric-label">FEATURES DELIVERED</div>
             </div>
             <div class="card-footer">
-                <div class="health-score">3.38</div>
+                <div class="health-score">0.00</div>
                 <div class="health-divider"></div>
                 <div class="health-max">4.00</div>
                 <div class="health-label">HEALTH METRICS</div>
@@ -269,16 +242,16 @@
         <div class="card">
             <div class="card-header card-header-secondary">
                 <h2>DIGITAL</h2>
-                <div class="item">✓ AVATARS</div><div class="item">✓ DESTINO</div><div class="item">✓ SDI WEBSITE</div><div class="item">✓ XENO</div>
+                <div class="item">✓ DESTINO</div><div class="item">✓ SDI WEBSITE</div><div class="item">✓ XENO</div>
             </div>
             <div class="card-body">
-                <div class="metric-largewhite">3</div>
+                <div class="metric-large">3</div>
                 <div class="metric-divider"></div>
-                <div class="metric-largewhite">39</div>
-                <div class="metric-labelwhite">FEATURES DELIVERED</div>
+                <div class="metric-large">0</div>
+                <div class="metric-label">FEATURES DELIVERED</div>
             </div>
             <div class="card-footer">
-                <div class="health-score">3.63</div>
+                <div class="health-score">0.00</div>
                 <div class="health-divider"></div>
                 <div class="health-max">4.00</div>
                 <div class="health-label">HEALTH METRICS</div>
@@ -288,16 +261,16 @@
         <div class="card">
             <div class="card-header card-header-secondary">
                 <h2>ENTERPRISE APPLICATIONS</h2>
-                <div class="item">✓ AX GUARDIANS</div><div class="item">✓ DELTA 365</div><div class="item">✓ ENTERPRISE AUTOMATION</div><div class="item">✓ WARETEC</div>
+                <div class="item">✓ DELTA 365</div><div class="item">✓ ENTERPRISE AUTOMATION</div><div class="item">✓ WARETEC</div>
             </div>
             <div class="card-body">
-                <div class="metric-largewhite">0</div>
+                <div class="metric-large">0</div>
                 <div class="metric-divider"></div>
-                <div class="metric-largewhite">43</div>
-                <div class="metric-labelwhite">FEATURES DELIVERED</div>
+                <div class="metric-large">0</div>
+                <div class="metric-label">FEATURES DELIVERED</div>
             </div>
             <div class="card-footer">
-                <div class="health-score">3.58</div>
+                <div class="health-score">0.00</div>
                 <div class="health-divider"></div>
                 <div class="health-max">4.00</div>
                 <div class="health-label">HEALTH METRICS</div>
@@ -307,13 +280,13 @@
         <div class="card">
             <div class="card-header card-header-secondary">
                 <h2>TECHNOLOGY OPERATIONS</h2>
-                <div class="item">✓ CSI</div><div class="item">✓ CYBER DEFENCE</div><div class="item">✓ CYBER OPERATIONS</div><div class="item">✓ ENTERPRISE ARCHITECTURE</div><div class="item">✓ GRC</div><div class="item">✓ JSOC</div><div class="item">✓ MATRIX</div>
+                <div class="item">✓ CYBER DEFENCE</div><div class="item">✓ CYBER OPERATIONS</div><div class="item">✓ ENTERPRISE ARCHITECTURE</div><div class="item">✓ GRC</div><div class="item">✓ JSOC</div><div class="item">✓ MATRIX</div>
             </div>
             <div class="card-body">
-                <div class="metric-largewhite">2</div>
+                <div class="metric-large">0</div>
                 <div class="metric-divider"></div>
-                <div class="metric-largewhite">71</div>
-                <div class="metric-labelwhite">FEATURES DELIVERED</div>
+                <div class="metric-large">71</div>
+                <div class="metric-label">FEATURES DELIVERED</div>
             </div>
             <div class="card-footer">
                 <div class="health-score">3.21</div>
