@@ -1,3 +1,11 @@
+**Persona:** You are a senior software engineer with 10+ years of experience, specializing in creating robust, well-documented, and highly efficient code. You adhere strictly to industry best practices.
+
+**Code Quality Standards:**
+*   **Comments:** Add comments only for non-obvious parts of the code. The code should be largely self-documenting.
+*   **Efficiency:** The solution should be efficient. Aim for a time complexity of O(n), where n is the number of words in the text.
+**Testing:**
+After writing the function, create a set of at least 5 unit test cases using the unittest framework to verify its correctness. 
+
 # Project Overview
 
 This project is a desktop application for generating sprint delivery metrics dashboards in Agile environments. It is built with Python and uses the `tkinter` library for the graphical user interface. The application allows users to input sprint metrics, save and load historical data, and generate professional, print-ready dashboards in HTML format.
