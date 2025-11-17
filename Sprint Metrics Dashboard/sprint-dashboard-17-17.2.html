@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Technology - Increment 17</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #e8e8e8;
+            padding: 25px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #e8e8e8;
+            padding: 35px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .header-left {
+            flex: 1;
+        }
+        
+        .subtitle {
+            font-size: 19px;
+            color: #ff6633;
+            font-weight: 400;
+            margin-bottom: 2px;
+        }
+        
+        .subtitle strong {
+            font-weight: 700;
+        }
+        
+        .title {
+            font-size: 40px;
+            font-weight: 900;
+            color: #003d5c;
+            letter-spacing: -0.5px;
+        }
+        
+        .title .increment {
+            color: #ff6633;
+        }
+        
+        .logo {
+            text-align: right;
+            line-height: 1;
+        }
+        
+        .logo-main {
+            font-size: 46px;
+            font-weight: 900;
+            color: #003d5c;
+            letter-spacing: 1px;
+        }
+        
+        .logo-sub {
+            font-size: 12px;
+            color: #003d5c;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            margin-top: -2px;
+        }
+        
+        .progress-bar {
+            background: #c8c8c8;
+            border-radius: 30px;
+            padding: 8px 12px;
+            margin-bottom: 30px;
+            display: flex;
+            position: relative;
+            align-items: center;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .progress-segment {
+            flex: 1;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            color: #a0a0a0;
+            padding: 8px 0;
+            position: relative;
+        }
+        
+        .progress-segment.active {
+            background: #ff6633;
+            color: white;
+            border-radius: 22px;
+            padding: 8px 20px;
+            margin: 0 5px;
+        }
+        
+        .progress-segment.active::after {
+            content: '';
+            position: absolute;
+            right: -18px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: #00355a;
+            border-radius: 50%;
+            border: 3px solid #e8e8e8;
+            z-index: 2;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .card {
+            background: white;
+            border: 3.5px solid #003d5c;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .card-header {
+            padding: 22px 20px;
+            color: white;
+            min-height: 185px;
+            position: relative;
+        }
+        
+        .card:nth-child(1) .card-header {
+            background: #1e4d6b;
+        }
+        
+        .card:nth-child(2) .card-header {
+            background: linear-gradient(145deg, #526d7d 0%, #445e6f 40%, #3a5565 100%);
+        }
+        
+        .card:nth-child(3) .card-header {
+            background: linear-gradient(145deg, #4e6978 0%, #3f5968 40%, #355060 100%);
+        }
+        
+        .card:nth-child(4) .card-header {
+            background: linear-gradient(145deg, #485f71 0%, #3a5465 40%, #2f495b 100%);
+            overflow: hidden;
+        }
+        
+        .card:nth-child(4) .card-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 65%);
+            border-radius: 50%;
+        }
+        
+        .card-title {
+            font-size: 25px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            letter-spacing: 0.3px;
+        }
+        
+        .card-items {
+            font-size: 12.5px;
+            line-height: 1.65;
+            font-weight: 400;
+        }
+        
+        .card-item {
+            margin-bottom: 2px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .card-item::before {
+            content: '✓';
+            margin-right: 7px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .card:nth-child(1) .card-items {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2px;
+        }
+        
+        .card:nth-child(4) .card-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px 10px;
+        }
+        
+        .card-body {
+            padding: 32px 20px 28px;
+            text-align: center;
+            background: white;
+        }
+        
+        .metrics {
+            margin-bottom: 16px;
+        }
+        
+        .metric-top {
+            font-size: 125px;
+            font-weight: 900;
+            color: white;
+            line-height: 0.9;
+        }
+        
+        .card:nth-child(1) .metric-top { color: #003d5c; }
+        .card:nth-child(2) .metric-top { color: #f5f5f5; }
+        .card:nth-child(3) .metric-top { color: #f5f5f5; }
+        .card:nth-child(4) .metric-top { color: #f5f5f5; }
+        
+        .metric-divider {
+            height: 5px;
+            background: #ff6633;
+            margin: 10px 38px;
+        }
+        
+        .metric-bottom {
+            font-size: 125px;
+            font-weight: 900;
+            color: #003d5c;
+            line-height: 0.9;
+        }
+        
+        .metric-label {
+            font-size: 16px;
+            font-weight: 900;
+            color: #003d5c;
+            margin-top: 16px;
+            letter-spacing: 0.3px;
+        }
+        
+        .card-footer {
+            background: #ff6633;
+            padding: 20px 20px 22px;
+            text-align: center;
+            color: white;
+        }
+        
+        .health-top {
+            font-size: 54px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 3px;
+        }
+        
+        .health-divider {
+            height: 3.5px;
+            background: #003d5c;
+            margin: 6px 38px;
+        }
+        
+        .health-bottom {
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        
+        .health-label {
+            font-size: 14px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <div class="subtitle"><strong>Delivery metrics for</strong> Sprint 17.1 - 17.2</div>
+                <div class="title">DIGITAL TECHNOLOGY – <span class="increment">INCREMENT 17</span></div>
+            </div>
+            <div class="logo">
+                <div class="logo-main">SIME</div>
+                <div class="logo-sub">INDUSTRIAL</div>
+            </div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-segment ">17.1</div>
+            <div class="progress-segment active">17.2</div>
+            <div class="progress-segment ">17.3</div>
+            <div class="progress-segment ">17.4</div>
+            <div class="progress-segment ">17.5</div>
+            <div class="progress-segment ">17.6</div>
+        </div>
+        
+        <div class="cards">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">DIGITAL<br>TECHNOLOGY</div>
+                    <div class="card-items">
+                        <div class="card-item">DIGITAL</div>
+                        <div class="card-item">ENTERPRISE APPLICATIONS</div>
+                        <div class="card-item">TECHNOLOGY OPERATIONS</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="metrics">
+                        <div class="metric-top">5</div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-bottom">153</div>
+                    </div>
+                    <div class="metric-label">FEATURES DELIVERED</div>
+                </div>
+                <div class="card-footer">
+                    <div class="health-top">3.38</div>
+                    <div class="health-divider"></div>
+                    <div class="health-bottom">4.00</div>
+                    <div class="health-label">HEALTH METRICS</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">DIGITAL</div>
+                    <div class="card-items">
+                        <div class="card-item">AVATARS</div>
+                        <div class="card-item">DESTINO</div>
+                        <div class="card-item">SDI WEBSITE</div>
+                        <div class="card-item">XENO</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="metrics">
+                        <div class="metric-top">3</div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-bottom">39</div>
+                    </div>
+                    <div class="metric-label">FEATURES DELIVERED</div>
+                </div>
+                <div class="card-footer">
+                    <div class="health-top">3.63</div>
+                    <div class="health-divider"></div>
+                    <div class="health-bottom">4.00</div>
+                    <div class="health-label">HEALTH METRICS</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">ENTERPRISE<br>APPLICATIONS</div>
+                    <div class="card-items">
+                        <div class="card-item">AX GUARDIANS</div>
+                        <div class="card-item">DELTA 365</div>
+                        <div class="card-item">ENTERPRISE AUTOMATION</div>
+                        <div class="card-item">WARETEC</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="metrics">
+                        <div class="metric-top">0</div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-bottom">43</div>
+                    </div>
+                    <div class="metric-label">FEATURES DELIVERED</div>
+                </div>
+                <div class="card-footer">
+                    <div class="health-top">3.58</div>
+                    <div class="health-divider"></div>
+                    <div class="health-bottom">4.00</div>
+                    <div class="health-label">HEALTH METRICS</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">TECHNOLOGY<br>OPERATIONS</div>
+                    <div class="card-items">
+                        <div class="card-item">CSI</div>
+                        <div class="card-item">GRC</div>
+                        <div class="card-item">CYBER DEFENCE</div>
+                        <div class="card-item">JSOC</div>
+                        <div class="card-item">CYBER OPERATIONS</div>
+                        <div class="card-item">MATRIX</div>
+                        <div class="card-item">ENTERPRISE ARCHITECTURE</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="metrics">
+                        <div class="metric-top">2</div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-bottom">71</div>
+                    </div>
+                    <div class="metric-label">FEATURES DELIVERED</div>
+                </div>
+                <div class="card-footer">
+                    <div class="health-top">3.21</div>
+                    <div class="health-divider"></div>
+                    <div class="health-bottom">4.00</div>
+                    <div class="health-label">HEALTH METRICS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
