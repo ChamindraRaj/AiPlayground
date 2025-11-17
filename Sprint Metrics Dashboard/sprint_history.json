@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "increment": 17,
+    "current_sprint": "17.4",
+    "sprint_range": "17.1 - 17.4",
+    "metrics": {
+      "digitalTechnology": {
+        "delivered": 5,
+        "total": 153,
+        "health": 3.38
+      },
+      "digital": {
+        "delivered": 3,
+        "total": 39,
+        "health": 3.63
+      },
+      "enterpriseApplications": {
+        "delivered": 0,
+        "total": 43,
+        "health": 3.58
+      },
+      "technologyOperations": {
+        "delivered": 2,
+        "total": 71,
+        "health": 3.21
+      }
+    },
+    "timestamp": "2025-11-17T18:25:49.344603"
+  },
+  {
+    "increment": 17,
+    "current_sprint": "17.1",
+    "sprint_range": "17.1 - 17.1",
+    "metrics": {
+      "digitalTechnology": {
+        "delivered": 5,
+        "total": 153,
+        "health": 3.38
+      },
+      "digital": {
+        "delivered": 3,
+        "total": 39,
+        "health": 3.63
+      },
+      "enterpriseApplications": {
+        "delivered": 0,
+        "total": 43,
+        "health": 3.58
+      },
+      "technologyOperations": {
+        "delivered": 2,
+        "total": 71,
+        "health": 3.21
+      }
+    },
+    "timestamp": "2025-11-17T18:25:27.564090"
+  }
+]
