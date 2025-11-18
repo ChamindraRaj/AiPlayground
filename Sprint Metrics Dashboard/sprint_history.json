@@ -1,6 +1,34 @@
 [
   {
     "increment": 17,
+    "current_sprint": "17.2",
+    "sprint_range": "17.1 - 17.2",
+    "metrics": {
+      "digitalTechnology": {
+        "delivered": 15,
+        "total": 153,
+        "health": 3.38
+      },
+      "digital": {
+        "delivered": 8,
+        "total": 39,
+        "health": 3.63
+      },
+      "enterpriseApplications": {
+        "delivered": 5,
+        "total": 43,
+        "health": 3.58
+      },
+      "technologyOperations": {
+        "delivered": 2,
+        "total": 71,
+        "health": 3.21
+      }
+    },
+    "timestamp": "2025-11-18T14:42:37.012373"
+  },
+  {
+    "increment": 17,
     "current_sprint": "17.4",
     "sprint_range": "17.1 - 17.4",
     "metrics": {

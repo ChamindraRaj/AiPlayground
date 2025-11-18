@@ -92,11 +92,20 @@
             background: #ff6633;
             color: white;
             font-size: 20px;
-            border-radius: 20px;
             position: relative;
         }
+
+        .progress-item.active.active-first {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .progress-item.active.active-last {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
         
-        .progress-item.active::after {
+        .progress-item.active.active-last::after {
             content: '';
             position: absolute;
             right: -15px;
@@ -243,7 +252,7 @@
             </div>
         </div>
         
-        <div class="progress-container"><div class="progress-item active">17.1</div><div class="progress-item ">17.2</div><div class="progress-item ">17.3</div><div class="progress-item ">17.4</div><div class="progress-item ">17.5</div><div class="progress-item ">17.6</div></div>
+        <div class="progress-container"><div class="progress-item active active-first active-last">17.1</div><div class="progress-item">17.2</div><div class="progress-item">17.3</div><div class="progress-item">17.4</div><div class="progress-item">17.5</div><div class="progress-item">17.6</div></div>
         
         <div class="cards-container">
             
